@@ -30,7 +30,18 @@ class List extends Component {
     if (loading) {
       return <div>Loading...</div>;
     }
-    return data.map(movie => <Card key={movie.id} movie={movie} />);
+    return (
+      <div className="container">
+        <div className="row">
+          {data.map(movie => (
+            <div className="col-sm-3">
+              <Card key={movie.id} movie={movie} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+    // data.map(movie => <Card key={movie.id} movie={movie} />);
   }
 }
 
