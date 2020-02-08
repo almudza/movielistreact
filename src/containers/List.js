@@ -34,8 +34,8 @@ class List extends Component {
       <div className="container">
         <div className="row">
           {data.map(movie => (
-            <div className="col-sm-3">
-              <Card key={movie.id} movie={movie} />
+            <div key={movie.id} className="col-sm-6 col-lg-3">
+              <Card movie={movie} />
             </div>
           ))}
         </div>
